@@ -1,0 +1,102 @@
+.quote-container {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.quote-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.quote-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a2f5c;
+  transition: color 0.3s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: #0a2f5c;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #07305c;
+}
+
+/* ============================ */
+/* 🌙 Dark Mode Styles */
+/* ============================ */
+body.dark .quote-container {
+  background-color: #1f1f1f;
+}
+
+body.dark .quote-form {
+  background-color: #2c2c2c;
+  color: #f1f1f1;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .quote-form h2 {
+  color: #ffd700;
+}
+
+body.dark .form-group label {
+  color: #e0e0e0;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background-color: #3a3a3a;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark button[type="submit"] {
+  background-color: #ffd700;
+  color: #111;
+}
+
+body.dark button[type="submit"]:hover {
+  background-color: #e6c200;
+}

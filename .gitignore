@@ -1,0 +1,36 @@
+# Node modules - both backend and frontend
+node_modules/
+client/node_modules/
+
+# Logs
+logs/
+*.log
+
+# Environment files
+.env
+backend/.env
+client/.env
+
+# Build output
+build/
+client/build/
+dist/
+
+# OS and system files
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+*.code-workspace
+
+# Mongo dump
+dump/
+
+# Test and coverage
+coverage/
+*.pid
+
+# Optional: uploaded images/files
+public/uploads/

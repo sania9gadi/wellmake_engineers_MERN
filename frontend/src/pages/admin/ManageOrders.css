@@ -1,0 +1,253 @@
+/* Container for the whole Manage Orders page */
+.manage-orders {
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Back button styling */
+.back-button {
+  margin-bottom: 20px;
+  padding: 8px 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #222;
+}
+
+/* Layout for all order cards */
+.order-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Individual order card styling */
+.order-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+body.dark .order-card {
+  background: #1e2a38;
+  border-color: #2e3d52;
+  color: #eee;
+}
+
+/* Order title */
+.order-card h3 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+body.dark .order-card h3 {
+  color: #fff;
+}
+
+/* Products section */
+.products {
+  margin-top: 12px;
+}
+
+/* Table for products inside each order card */
+.product-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.product-table th,
+.product-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.product-table th {
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+body.dark .product-table th {
+  background-color: #2f3e4f;
+  color: #ddd;
+}
+
+body.dark .product-table td {
+  background-color: #1e2a38;
+  border-color: #444;
+  color: #ccc;
+}
+
+/* Total row styling */
+.product-table tfoot td {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+body.dark .product-table tfoot td {
+  background-color: #2d3a4d;
+  color: #f0f0f0;
+}
+
+/* Status dropdown wrapper */
+.status-select {
+  margin: 12px 0;
+}
+
+/* Dropdown styling */
+select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background-color: #fff;
+  transition: border-color 0.2s ease, background-color 0.3s ease;
+  color: #333;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+body.dark select {
+  background-color: #1e2a38;
+  color: #eee;
+  border-color: #555;
+}
+
+/* Search controls section */
+.search-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+/* Input bar */
+.search-bar {
+  flex: 1;
+  min-width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+}
+
+body.dark .search-bar {
+  background-color: #1d2735;
+  color: #eee;
+  border-color: #555;
+}
+
+/* Search and reset buttons */
+.search-button,
+.reset-button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.search-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+.reset-button {
+  background-color: #f0f0f0;
+  color: #333;
+}
+
+.reset-button:hover {
+  background-color: #ddd;
+}
+
+body.dark .reset-button {
+  background-color: #2f3e4f;
+  color: #ddd;
+}
+
+body.dark .reset-button:hover {
+  background-color: #3a4b61;
+}
+
+/* Responsive Table without JSX change */
+@media screen and (max-width: 768px) {
+  .product-table,
+  .product-table thead,
+  .product-table tbody,
+  .product-table th,
+  .product-table td,
+  .product-table tr {
+    display: block;
+    width: 100%;
+  }
+
+  .product-table thead {
+    display: none;
+  }
+
+  .product-table tr {
+    margin-bottom: 15px;
+    background-color: inherit;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+  }
+
+  .product-table td {
+    position: relative;
+    padding-left: 50%;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .product-table td::before {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45%;
+    white-space: nowrap;
+    font-weight: bold;
+    content: attr(data-label);
+    color: #555;
+  }
+
+  body.dark .product-table td::before {
+    color: #aaa;
+  }
+}

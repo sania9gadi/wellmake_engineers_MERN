@@ -1,0 +1,124 @@
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  transition: background-color 0.3s ease;
+}
+
+/* === SIDEBAR === */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #0a2f5c, #114d8b);
+  color: white;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background 0.3s ease;
+  flex-shrink: 0;
+}
+
+.sidebar h2 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 16px;
+}
+
+.sidebar nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  display: block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  background-color: #1a4c85;
+}
+
+/* === CONTENT === */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f9fafb;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: auto;
+}
+
+/* 🌙 DARK MODE */
+body.dark .sidebar {
+  background: linear-gradient(135deg, #091c33, #163d66);
+  color: #ffffff;
+}
+
+body.dark .sidebar nav a {
+  color: #ffffff;
+}
+
+body.dark .sidebar nav a:hover,
+body.dark .sidebar nav .active {
+  background-color: #23588c;
+}
+
+body.dark .content {
+  background-color: #101c2c;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  .admin-dashboard {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 90%;
+    margin: 16px auto;
+    background: linear-gradient(135deg, #0a2f5c, #114d8b);
+    padding: 20px 16px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 8px;
+  }
+
+  .sidebar nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .sidebar nav a {
+    font-size: 15px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
+    text-align: left;
+  }
+
+  .sidebar nav a:hover,
+  .sidebar nav .active {
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .content {
+    padding: 20px;
+  }
+}

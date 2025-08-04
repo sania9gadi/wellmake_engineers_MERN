@@ -1,0 +1,123 @@
+.user-dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* 🔵 Top Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(135deg, #0a2f5c, #1663a6);
+  color: white;
+  padding: 15px 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.top-navbar h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.cart-icon-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  position: relative;
+}
+
+.cart-icon-btn:hover {
+  transform: scale(1.1);
+}
+
+/* 🔹 Dashboard Body */
+.dashboard-body {
+  display: flex;
+  flex: 1;
+}
+
+/* 📁 Sidebar */
+.sidebar {
+  width: 220px;
+  background: linear-gradient(135deg, #0a2f5c, #1663a6);
+  color: white;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav li {
+  margin-bottom: 16px;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 10px 14px;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar nav a:hover,
+.sidebar nav .active {
+  background-color: #1a4c85;
+  transform: translateX(4px);
+}
+
+/* 🧾 Main Content Area */
+.content {
+  flex: 1;
+  padding: 40px;
+  background-color: #f4f8fc;
+  color: #1e2a38;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* 🌙 Dark Mode Support */
+body.dark-mode .top-navbar {
+  background: linear-gradient(135deg, #091b33, #123d66);
+  color: #f0f0f0;
+}
+
+body.dark-mode .cart-icon-btn {
+  color: #ffd700;
+}
+
+body.dark-mode .sidebar {
+  background: linear-gradient(135deg, #0a1a33, #123d66);
+  color: #e0e0e0;
+  box-shadow: 2px 0 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .sidebar nav a {
+  color: #e0e0e0;
+}
+
+body.dark-mode .sidebar nav a:hover,
+body.dark-mode .sidebar nav .active {
+  background-color: #244d77;
+}
+
+body.dark-mode .content {
+  background-color: #0d1b2a;
+  color: #e0e0e0;
+}

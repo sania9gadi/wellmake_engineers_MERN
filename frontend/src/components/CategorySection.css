@@ -1,0 +1,12 @@
+.category-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}

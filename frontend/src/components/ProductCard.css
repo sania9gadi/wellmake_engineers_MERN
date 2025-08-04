@@ -1,0 +1,87 @@
+.product-card-list {
+  display: flex;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  align-items: center;
+  transition: transform 0.2s, background-color 0.3s ease, color 0.3s ease;
+}
+
+.product-card-list:hover {
+  transform: translateY(-2px);
+}
+
+.product-img-list {
+  width: 200px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.product-details h3 {
+  margin: 0 0 10px;
+  font-size: 20px;
+  color: #0a2f5c;
+  transition: color 0.3s ease;
+}
+
+.product-details p {
+  margin: 5px 0;
+  color: #444;
+  transition: color 0.3s ease;
+}
+
+.card-actions {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.card-actions button {
+  padding: 10px 16px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0a2f5c;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-actions button:hover {
+  background-color: #07305c;
+}
+
+/* ============================== */
+/* 🌙 Dark Mode Styling */
+/* ============================== */
+
+body.dark .product-card-list {
+  background-color: #13243c;
+  box-shadow: 0 0 12px rgba(247, 224, 224, 0.05);
+}
+
+body.dark .product-details h3 {
+  color: #ffd700;
+}
+
+body.dark .product-details p {
+  color: #ddd;
+}
+
+body.dark .card-actions button {
+  background-color: #ffd700;
+  color: #0a2f5c;
+}
+
+body.dark .card-actions button:hover {
+  background-color: #e6c200;
+}

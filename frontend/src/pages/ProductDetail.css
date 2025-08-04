@@ -1,0 +1,180 @@
+/* 🌟 Product Detail Layout */
+.product-detail-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 10%;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f2f6fc;
+  color: #1e2a38;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* 📷 Product Image */
+.product-image {
+  flex: 1;
+  min-width: 300px;
+  max-width: 450px;
+  text-align: center;
+}
+
+.product-image img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.03);
+}
+
+/* 📝 Product Info */
+.product-info {
+  flex: 2;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.product-info h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0a2f5c;
+}
+
+.product-info h4 {
+  font-size: 1.25rem;
+  margin-top: 8px;
+  color: #0a2f5c;
+  font-weight: 600;
+}
+
+.product-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ✅ Feature List */
+.product-info ul {
+  padding-left: 20px;
+  margin-top: -8px;
+}
+
+.product-info ul li {
+  margin-bottom: 8px;
+  color: #444;
+  list-style: disc;
+}
+
+/* 💰 Price */
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #007b5e;
+}
+
+/* 📎 Brochure Button */
+.btn-download-brochure {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #0a2f5c;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(10, 47, 92, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-download-brochure:hover {
+  background-color: #09345e;
+  transform: translateY(-1px);
+}
+
+/* 🛒 Add to Cart Button */
+.add-to-cart {
+  margin-top: 25px;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #0a2f5c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(10, 47, 92, 0.2);
+  transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #09345e;
+}
+
+/* 🌙 Dark Mode */
+body.dark .product-detail-container {
+  background-color: #0c1a2b;
+  color: #e6e6e6;
+}
+
+body.dark .product-info h2,
+body.dark .product-info h4 {
+  color: #ffd700;
+}
+
+body.dark .product-info p,
+body.dark .product-info ul li {
+  color: #dcdcdc;
+}
+
+body.dark .price {
+  color: #ffd700;
+}
+
+body.dark .btn-download-brochure {
+  background-color: #ffd700;
+  color: #0a2f5c;
+}
+
+body.dark .btn-download-brochure:hover {
+  background-color: #e6c200;
+}
+
+body.dark .add-to-cart {
+  background-color: #ffd700;
+  color: #0a2f5c;
+}
+
+body.dark .add-to-cart:hover {
+  background-color: #e6c200;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .product-detail-container {
+    flex-direction: column;
+    padding: 40px 5%;
+  }
+
+  .product-image {
+    text-align: center;
+  }
+
+  .product-info h2 {
+    font-size: 1.75rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
+
+  .add-to-cart {
+    width: 100%;
+    text-align: center;
+  }
+}

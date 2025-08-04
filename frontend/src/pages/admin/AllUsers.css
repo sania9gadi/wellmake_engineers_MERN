@@ -1,0 +1,119 @@
+.all-users {
+  padding: 2rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: auto;
+}
+
+/* Table Styles */
+.all-users table {
+  margin-top: 1rem;
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 600px;
+}
+
+/* Cell Styles */
+.all-users th,
+.all-users td {
+  border: 1px solid #ccc;
+  padding: 0.8rem;
+  text-align: left;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+.all-users th {
+  background-color: #f4f4f4;
+  color: #0a2f5c;
+}
+
+/* Button */
+.all-users button {
+  margin-top: 1rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  background-color: #0a2f5c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.all-users button:hover {
+  background-color: #07305c;
+}
+
+/* 🌙 Dark Mode */
+body.dark .all-users {
+  background-color: #101c2c;
+  color: #ffffff;
+}
+
+body.dark .all-users th {
+  background-color: #1a2b44;
+  color: #ffd700;
+}
+
+body.dark .all-users td {
+  border-color: #33425b;
+  color: #f0f0f0;
+}
+
+body.dark .all-users button {
+  background-color: #ffd700;
+  color: #0a2f5c;
+}
+
+body.dark .all-users button:hover {
+  background-color: #e6c200;
+}
+
+/* 📱 Responsive Table Layout */
+@media (max-width: 768px) {
+  .all-users table {
+    border: 0;
+    min-width: unset;
+  }
+
+  .all-users thead {
+    display: none;
+  }
+
+  .all-users tr {
+    display: block;
+    margin-bottom: 1rem;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 0.5rem;
+  }
+
+  body.dark .all-users tr {
+    background-color: #1e2a38;
+  }
+
+  .all-users td {
+    display: block;
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .all-users td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 1rem;
+    width: 45%;
+    padding-right: 1rem;
+    font-weight: bold;
+    text-align: left;
+    white-space: nowrap;
+  }
+
+  .all-users td:last-child {
+    border-bottom: 0;
+  }
+}

@@ -1,0 +1,97 @@
+.order-container {
+  min-height: 100vh;
+  background-color: #f3f4f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  transition: background-color 0.3s ease;
+}
+
+.order-form {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.order-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #0a2f5c;
+  transition: color 0.3s ease;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button[type="submit"] {
+  background-color: #0a2f5c;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #07305c;
+}
+
+/* ============================ */
+/* 🌙 Dark Mode Styles */
+/* ============================ */
+body.dark .order-container {
+  background-color: #1f1f1f;
+}
+
+body.dark .order-form {
+  background-color: #2b2b2b;
+  color: #f1f1f1;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .order-form h2 {
+  color: #ffd700;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background-color: #3b3b3b;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark button[type="submit"] {
+  background-color: #ffd700;
+  color: #111;
+}
+
+body.dark button[type="submit"]:hover {
+  background-color: #e6c200;
+}

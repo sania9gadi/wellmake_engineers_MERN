@@ -1,0 +1,139 @@
+/* ✅ Inquiry Container */
+.inquiry-container {
+  padding: 40px;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ Light Mode Form */
+.inquiry-form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 500px;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.inquiry-form h2 {
+  text-align: center;
+  color: #0a2f5c;
+  margin-bottom: 25px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  display: block;
+  margin-bottom: 6px;
+  color: #0a2f5c;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  color: #0a2f5c;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+  resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0a2f5c;
+  outline: none;
+  background-color: #ffffff;
+}
+
+button[type="submit"] {
+  background-color: #0a2f5c;
+  color: white;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-weight: 600;
+}
+
+button[type="submit"]:hover {
+  background-color: #07305c;
+}
+
+/* ✅ Dark Mode */
+body.dark .inquiry-container {
+  background: linear-gradient(160deg, #06192b, #113d67, #1b4e88);
+  color: #ffffff;
+}
+
+body.dark .inquiry-form {
+  background-color: #112d4e;
+  color: #ffffff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.07);
+}
+
+body.dark .inquiry-form h2 {
+  color: #ffd700;
+}
+
+body.dark .form-group label {
+  color: #e0e0e0;
+}
+
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background-color: #1e2a38;
+  color: #ffffff;
+  border: 1px solid #4a5a70;
+}
+
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus {
+  background-color: #223344;
+  border-color: #ffd700;
+}
+
+body.dark button[type="submit"] {
+  background-color: #ffd700;
+  color: #0a2f5c;
+}
+
+body.dark button[type="submit"]:hover {
+  background-color: #e6c200;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+  .inquiry-container {
+    padding: 20px;
+  }
+
+  .inquiry-form {
+    padding: 25px;
+  }
+
+  .inquiry-form h2 {
+    font-size: 22px;
+  }
+
+  button[type="submit"] {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

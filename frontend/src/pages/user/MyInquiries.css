@@ -1,0 +1,161 @@
+.my-inquiries {
+  padding: 30px;
+  background-color: #f9f9f9;
+  font-family: 'Segoe UI', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+body.dark .my-inquiries {
+  background-color: #181818;
+  color: #f0f0f0;
+}
+
+.inquiries-heading {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #0a2f5c;
+}
+
+body.dark .inquiries-heading {
+  color: #66b2ff;
+}
+
+.inquiry-message {
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+body.dark .inquiry-message {
+  color: #ccc;
+}
+
+.inquiry-message.error {
+  color: red;
+}
+
+body.dark .inquiry-message.error {
+  color: #ff6b6b;
+}
+
+.inquiries-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.inquiry-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inquiry-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .inquiry-card {
+  background-color: #222;
+  border-color: #444;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .inquiry-card:hover {
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.08);
+}
+
+.inquiry-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  color: #0a2f5c;
+}
+
+body.dark .inquiry-card-header {
+  color: #66b2ff;
+}
+
+.inquiry-card p {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+body.dark .inquiry-card p {
+  color: #ddd;
+}
+
+.email-button {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease;
+}
+
+.email-button:hover {
+  background-color: #0056b3;
+}
+
+body.dark .email-button {
+  background-color: #0d6efd;
+}
+
+body.dark .email-button:hover {
+  background-color: #0a58ca;
+}
+
+/* ========== Responsive Design ========== */
+
+@media (max-width: 768px) {
+  .my-inquiries {
+    padding: 20px;
+  }
+
+  .inquiry-card {
+    padding: 15px;
+  }
+
+  .inquiries-heading {
+    font-size: 1.5rem;
+  }
+
+  .inquiry-card p {
+    font-size: 0.9rem;
+  }
+
+  .email-button {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .inquiries-cards {
+    gap: 16px;
+  }
+
+  .inquiry-card {
+    padding: 12px;
+  }
+
+  .inquiries-heading {
+    font-size: 1.4rem;
+  }
+
+  .email-button {
+    width: 100%;
+    text-align: center;
+  }
+}

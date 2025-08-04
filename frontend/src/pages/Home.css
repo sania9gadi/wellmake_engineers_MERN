@@ -1,0 +1,337 @@
+/* 🌐 Global */
+.home-page {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9fbfc;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  color: #0a2f5c;
+}
+
+body.dark .home-page {
+  background-color: #0d1b2a;
+  color: #ffffff;
+}
+
+/* 🎯 Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0a2f5c, #1a4c85);
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+body.dark .hero {
+  background: linear-gradient(135deg, #041021, #0d2e4a);
+}
+
+/* 📦 Section Base */
+.section {
+  padding: 40px 20px;
+  background-color: #f9fbfc;
+  color: #0a2f5c;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body.dark .section {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark .section h2 {
+  color: #e2e9f1;
+}
+
+/* 🔥 Popular Products */
+#popular-products.section {
+  background-image: url('../assets/image5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* 🧱 Product Cards */
+.product-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 25px;
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+ 
+}
+
+.card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  color: #0a2f5c;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #444;
+  font-size: 15px;
+}
+
+body.dark .card {
+  background-color: #112d4e;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+body.dark .card p {
+  color: #d9e3ea;
+}
+
+/* ℹ️ About Section */
+.about-section {
+  background: #eef4fb;
+  padding: 40px 25px;
+  border-radius: 12px;
+  margin: 50px auto;
+  max-width: 1000px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.about-section h3 {
+  color: #0a2f5c;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+body.dark .about-section {
+  background-color: #0e2b4c;
+  color: #ffffff;
+}
+
+/* 🚛 Carrier Widget */
+.carrier-widget {
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.06);
+  transition: background-color 0.3s ease;
+}
+
+.carrier-widget h4 {
+  color: #0a2f5c;
+}
+
+.carrier-widget button {
+  background-color: #0a2f5c;
+  color: white;
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.carrier-widget button:hover {
+  background-color: #083761;
+}
+
+body.dark .carrier-widget {
+  background-color: #0f3055;
+  color: #ffffff;
+  border: 1px solid #d0dce8;
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.07);
+}
+
+body.dark .carrier-widget button {
+  background-color: #ffffff;
+  color: #0f3055;
+}
+
+body.dark .carrier-widget button:hover {
+  background-color: #d0dce8;
+  color: #0a2f5c;
+}
+
+/* 👥 Testimonials */
+.testimonials-section {
+  margin: 60px 0;
+  text-align: center;
+  padding: 80px 20px;
+  background: linear-gradient(160deg, #0a2f5c, #1a4c85, #2363b2);
+  color: #ffffff;
+  transition: background 0.3s ease;
+}
+
+.carousel-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.testimonial-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 16px;
+  max-width: 650px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #ffffff;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+body.dark .testimonials-section {
+  background: linear-gradient(160deg, #06192b, #113d67, #1b4e88);
+}
+
+/* 📍 Location Section */
+.location-section {
+  background-color: #eef4fb;
+  padding: 60px 20px;
+  border-radius: 16px;
+  margin: 60px auto;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+  max-width: 1000px;
+  transition: background-color 0.3s ease;
+}
+
+.location-section h3 {
+  font-size: 30px;
+  color: #0a2f5c;
+}
+
+.location-section p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.location-map iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 12px;
+}
+
+body.dark .location-section {
+  background-color: #042750;
+  color: #ffffff;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .location-map iframe {
+  filter: grayscale(60%) invert(92%) contrast(90%);
+}
+
+/* 📱 Responsive Styles */
+@media (max-width: 768px) {
+  .card,
+  .testimonial-card {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .location-map iframe {
+    height: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card,
+  .testimonial-card {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .carrier-widget {
+    padding: 20px;
+  }
+
+  .about-section,
+  .location-section {
+    padding: 30px 15px;
+  }
+
+  .section h2 {
+    font-size: 24px;
+  }
+}

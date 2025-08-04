@@ -1,0 +1,40 @@
+/* adminNavbar.css */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  padding: 16px 32px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+}
+
+.navbar a:hover {
+  background-color: #ffffff33;
+  color: #ffd700;
+}
+
+/* Logout Button */
+.logout-button {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #c0392b;
+}
