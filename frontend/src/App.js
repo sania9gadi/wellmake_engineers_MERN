@@ -23,7 +23,7 @@ import { ThemeProvider, useTheme } from './context/ThemeContext';
 import Cart from './pages/Cart';
 import ProductDetail from './pages/ProductDetail';
 
-// ✅ Admin Pages
+// Admin Pages
 import AdminDashboard from './pages/admin/AdminDashboard';
 import Inquiries from './pages/admin/Inquiries';
 import AllUsers from './pages/admin/AllUsers';
@@ -32,7 +32,7 @@ import AddProduct from './pages/admin/AddProduct';
 import AddTestimonial from './pages/admin/AddTestimonial';
 import QuoteResponse from './pages/admin/QuoteResponse';
 
-// ✅ User Pages
+// User Pages
 import UserDashboard from './pages/user/UserDashboard';
 import MyOrders from './pages/user/MyOrders';
 import TrackOrder from './pages/user/TrackOrder';
@@ -42,7 +42,7 @@ import HelpCenter from './pages/user/HelpCenter';
 
 import './App.css';
 
-// ✅ Protected Route Component
+//Protected Route Component
 function ProtectedRoute({ element, allowedRole }) {
   const role = localStorage.getItem('role');
   return role === allowedRole ? element : <Navigate to="/" />;
@@ -61,7 +61,7 @@ function AppWrapper() {
       <Navbar />
 
       <Routes>
-        {/* ✅ Public Routes */}
+        {/* Public Routes */}
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/products/:category" element={<ProductCategory />} />
@@ -76,7 +76,7 @@ function AppWrapper() {
           element={cartItems.length > 0 ? <Order /> : <Navigate to="/products" />}
         />
 
-        {/* ✅ User Protected Routes */}
+        {/* User Protected Routes */}
         <Route
           path="/user/dashboard"
           element={<ProtectedRoute element={<UserDashboard />} allowedRole="user" />}
@@ -90,7 +90,7 @@ function AppWrapper() {
           <Route path="HelpCenter" element={<HelpCenter />} />
         </Route>
 
-        {/* ✅ Admin Protected Routes */}
+        {/*  Admin Protected Routes */}
         <Route
           path="/admin"
           element={<ProtectedRoute element={<AdminDashboard />} allowedRole="admin" />}
@@ -111,12 +111,11 @@ function AppWrapper() {
   );
 }
 
-// ✅ Final App
 function App() {
   return (
     <PayPalScriptProvider
       options={{
-        "client-id": "AWd7SqcNFx93pOQWsqkyysX5xr2kum5o0DwYDSA369TCE9WZhKCvR-pDedwGCrHIhbIPAZZaH4URFoGy", // 🟡 Replace this with your actual sandbox client ID
+        "client-id": "AWd7SqcNFx93pOQWsqkyysX5xr2kum5o0DwYDSA369TCE9WZhKCvR-pDedwGCrHIhbIPAZZaH4URFoGy", 
         currency: "USD",
       }}
     >

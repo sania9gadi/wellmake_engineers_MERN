@@ -7,7 +7,7 @@ function ProductCard({ id, title, description, image, price }) {
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    const role = localStorage.getItem('role'); // 🧠 or token, if you're using that
+    const role = localStorage.getItem('role'); 
     if (!role) {
       alert('Please login first to add items to cart.');
       navigate('/login');

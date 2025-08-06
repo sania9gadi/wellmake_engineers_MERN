@@ -8,7 +8,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* 🌙 Dark Mode Styling */
+/*  Dark Mode Styling */
 body.dark .products-container {
   background: linear-gradient(135deg, #0a2f5c, #1a4c85, #2d6fb5);
   color: #ffffff;

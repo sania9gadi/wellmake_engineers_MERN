@@ -157,7 +157,7 @@
   color: #1a1a1a;
 }
 
-/* ===================== Responsive ===================== */
+/*  Responsive  */
 @media (max-width: 768px) {
   .navbar {
     flex-wrap: wrap;
@@ -196,13 +196,13 @@
     margin-top: 10px;
   }
 
-  /* Mobile dark mode background */
+
   .dark .navbar-links {
     background-color: #1a1a1a;
   }
 }
 
-/* Fade Animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;

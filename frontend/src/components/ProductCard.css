@@ -60,9 +60,8 @@
   background-color: #07305c;
 }
 
-/* ============================== */
-/* 🌙 Dark Mode Styling */
-/* ============================== */
+/*  Dark Mode  */
+
 
 body.dark .product-card-list {
   background-color: #13243c;

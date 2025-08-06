@@ -1,4 +1,4 @@
-/* 🧭 Navbar Base Styling */
+/*  Navbar Base Styling */
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -22,7 +22,7 @@
   color: #ffffff;
 }
 
-/* 🔐 Logout Button */
+/*  Logout Button */
 .logout-button {
   background-color: #e74c3c;
   color: white;
@@ -38,7 +38,7 @@
   background-color: #c0392b;
 }
 
-/* 🌙 Dark Mode Support */
+/*  Dark Mode Support */
 body.dark .navbar {
   background: linear-gradient(to right, #1b2735, #485563);
 }

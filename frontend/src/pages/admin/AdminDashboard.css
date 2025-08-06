@@ -4,7 +4,7 @@
   transition: background-color 0.3s ease;
 }
 
-/* === SIDEBAR === */
+/*  SIDEBAR  */
 .sidebar {
   width: 220px;
   background: linear-gradient(135deg, #0a2f5c, #114d8b);
@@ -46,7 +46,7 @@
   background-color: #1a4c85;
 }
 
-/* === CONTENT === */
+/*  CONTENT  */
 .content {
   flex: 1;
   padding: 40px;
@@ -55,7 +55,7 @@
   overflow-x: auto;
 }
 
-/* 🌙 DARK MODE */
+/*  DARK MODE */
 body.dark .sidebar {
   background: linear-gradient(135deg, #091c33, #163d66);
   color: #ffffff;

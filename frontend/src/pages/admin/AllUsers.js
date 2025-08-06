@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './AllUsers.css'; // optional CSS
+import './AllUsers.css'; 
 
 const AllUsers = () => {
   const [users, setUsers] = useState([]);

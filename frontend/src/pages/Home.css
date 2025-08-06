@@ -1,4 +1,4 @@
-/* 🌐 Global */
+/* Global */
 .home-page {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f9fbfc;
@@ -11,7 +11,7 @@ body.dark .home-page {
   color: #ffffff;
 }
 
-/* 🎯 Hero Section */
+/*  Hero Section */
 .hero {
   background: linear-gradient(135deg, #0a2f5c, #1a4c85);
   color: #fff;
@@ -35,7 +35,7 @@ body.dark .hero {
   background: linear-gradient(135deg, #041021, #0d2e4a);
 }
 
-/* 📦 Section Base */
+/*  Section Base */
 .section {
   padding: 40px 20px;
   background-color: #f9fbfc;
@@ -60,7 +60,7 @@ body.dark .section h2 {
   color: #e2e9f1;
 }
 
-/* 🔥 Popular Products */
+/*  Popular Products */
 #popular-products.section {
   background-image: url('../assets/image5.jpg');
   background-size: cover;
@@ -74,7 +74,7 @@ body.dark .section h2 {
   color: #fff;
 }
 
-/* 🧱 Product Cards */
+/* Product Cards */
 .product-cards {
   display: flex;
   justify-content: center;
@@ -118,7 +118,7 @@ body.dark .card p {
   color: #d9e3ea;
 }
 
-/* ℹ️ About Section */
+/*  About Section */
 .about-section {
   background: #eef4fb;
   padding: 40px 25px;
@@ -145,7 +145,7 @@ body.dark .about-section {
   color: #ffffff;
 }
 
-/* 🚛 Carrier Widget */
+/* Carrier Widget */
 .carrier-widget {
   background-color: #fff;
   padding: 25px;
@@ -193,7 +193,7 @@ body.dark .carrier-widget button:hover {
   color: #0a2f5c;
 }
 
-/* 👥 Testimonials */
+/* Testimonials */
 .testimonials-section {
   margin: 60px 0;
   text-align: center;
@@ -244,7 +244,7 @@ body.dark .testimonials-section {
   background: linear-gradient(160deg, #06192b, #113d67, #1b4e88);
 }
 
-/* 📍 Location Section */
+/*  Location Section */
 .location-section {
   background-color: #eef4fb;
   padding: 60px 20px;
@@ -284,7 +284,7 @@ body.dark .location-map iframe {
   filter: grayscale(60%) invert(92%) contrast(90%);
 }
 
-/* 📱 Responsive Styles */
+/*  Responsive Styles */
 @media (max-width: 768px) {
   .card,
   .testimonial-card {

@@ -71,7 +71,7 @@ const { protectRoute } = require('../middleware/AuthMiddleware');
 const { checkAdmin } = require('../middleware/checkRole');
 const { validateInquiryData } = require('../middleware/inquiryValidation');
 
-// ✅ Updated /save route
+// Updated /save route
 router.post('/save', protectRoute, validateInquiryData, async (req, res) => {
   try {
     const inquiryData = {
@@ -82,14 +82,14 @@ router.post('/save', protectRoute, validateInquiryData, async (req, res) => {
     const inquiry = await submitInquiry(inquiryData);
     res.status(201).json(inquiry);
   } catch (err) {
-    console.log("❌ Inquiry Save Error:", err);
-    console.log("📨 Inquiry Body:", req.body);
+    console.log("Inquiry Save Error:", err);
+    console.log(" Inquiry Body:", req.body);
 
     res.status(500).json({ error: err.message });
   }
 });
 
-// ✅ My inquiries - user-specific
+//  My inquiries - user-specific
 router.get('/my', protectRoute, async (req, res) => {
   try {
     const userEmail = req.user.email;
@@ -101,7 +101,7 @@ router.get('/my', protectRoute, async (req, res) => {
   }
 });
 
-// ✅ Admin - Get all inquiries
+//  Admin - Get all inquiries
 router.get('/all-inquiries', protectRoute, checkAdmin, async (req, res) => {
   try {
     console.log("🟡 Request received to /all-inquiries");
@@ -114,7 +114,7 @@ router.get('/all-inquiries', protectRoute, checkAdmin, async (req, res) => {
   }
 });
 
-// ✅ Admin - Delete inquiry
+// Admin - Delete inquiry
 router.delete('/:id', protectRoute, checkAdmin, async (req, res) => {
   try {
     await deleteInquiry(req.params.id);

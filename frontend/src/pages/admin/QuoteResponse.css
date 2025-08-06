@@ -19,7 +19,7 @@ body.dark .quote-heading {
   color: #f1f1f1;
 }
 
-/* Message for loading / empty / error */
+/* Message for loading error */
 .quote-message {
   text-align: center;
   font-size: 16px;
@@ -60,7 +60,7 @@ body.dark .quote-card {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Header: name left, date right */
+/* Header*/
 .quote-header {
   display: flex;
   justify-content: space-between;

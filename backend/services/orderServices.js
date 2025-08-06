@@ -1,6 +1,6 @@
 const Order = require('../models/order');
 
-// ✅ Create a new order
+//  Create a new order
 async function placeOrder(data, userId) {
   const { orders, name, email, address, note, total } = data;
 
@@ -16,7 +16,7 @@ async function placeOrder(data, userId) {
       address,
       note,
     },
-    products: orders, // orders = [{ productId, quantity }]
+    products: orders, 
     price: total,
     status: 'Pending',
   });
@@ -24,7 +24,7 @@ async function placeOrder(data, userId) {
   return await order.save();
 }
 
-// ✅ Fetch all orders (admin only)
+//  Fetch all orders (admin only)
 const getAllOrders = async () => {
   try {
     const orders = await Order.find();
@@ -36,8 +36,8 @@ const getAllOrders = async () => {
 };
 
 
-// ✅ Get order by ID
-// Correct format (assuming your Order model has a field `userId`)
+//  Get order by ID
+
 const getOrderById = async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.params.id });
@@ -49,12 +49,12 @@ const getOrderById = async (req, res) => {
 };
 
 
-// ✅ Cancel order by ID (delete)
+//  Cancel order by ID 
 async function cancelOrder(id) {
   return await Order.findByIdAndDelete(id);
 }
 
-// ✅ Update order status
+//  Update order status
 const updateOrderStatus = async (req, res) => {
   try {
     const orderId = req.params.id;

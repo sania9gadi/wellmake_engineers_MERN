@@ -12,13 +12,14 @@ const ManageOrders = () => {
   const fetchOrders = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get('http://localhost:9000/api/order/all-orders', {
+      const res = await axios.get('http://localhost:9000/api/order/all-orders', 
+        {
         headers: {
           Authorization: `Bearer ${token}`
         }
       });
       setOrders(res.data);
-      setFilteredOrders(res.data); // show all by default
+      setFilteredOrders(res.data); 
     } catch (error) {
       console.error("Error fetching orders:", error);
       alert("Something went wrong.");

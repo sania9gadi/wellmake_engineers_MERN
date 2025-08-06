@@ -176,7 +176,7 @@ body.dark .item-qty {
   color: #ccc;
 }
 
-/* ========= Responsive ========= */
+/*Responsive*/
 
 @media (max-width: 768px) {
   .my-orders {

@@ -4,7 +4,7 @@
   min-height: 100vh;
 }
 
-/* 🔵 Top Navbar */
+/* Top Navbar */
 .top-navbar {
   display: flex;
   justify-content: space-between;
@@ -34,13 +34,13 @@
   transform: scale(1.1);
 }
 
-/* 🔹 Dashboard Body */
+/* Dashboard Body */
 .dashboard-body {
   display: flex;
   flex: 1;
 }
 
-/* 📁 Sidebar */
+/*  Sidebar */
 .sidebar {
   width: 220px;
   background: linear-gradient(135deg, #0a2f5c, #1663a6);
@@ -82,7 +82,7 @@
   transform: translateX(4px);
 }
 
-/* 🧾 Main Content Area */
+/*  Main Content Area */
 .content {
   flex: 1;
   padding: 40px;
@@ -92,7 +92,7 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* 🌙 Dark Mode Support */
+/* Dark Mode Support */
 body.dark-mode .top-navbar {
   background: linear-gradient(135deg, #091b33, #123d66);
   color: #f0f0f0;

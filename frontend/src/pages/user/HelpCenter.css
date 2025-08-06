@@ -136,7 +136,7 @@ body.dark .contact-section a:hover {
   color: #bfdbfe;
 }
 
-/* ========== Responsive Design ========== */
+/*  Responsive Design*/
 
 @media (max-width: 768px) {
   .help-center {

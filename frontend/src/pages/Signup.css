@@ -1,4 +1,4 @@
-/* ✅ Signup Container */
+/* Signup Container */
 .signup-container {
   min-height: 100vh;
   background-color: #f9fbfc;
@@ -8,7 +8,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ Light Mode (Default) */
+/* Light Mode  */
 .signup-form {
   background-color: #ffffff;
   padding: 40px;
@@ -85,10 +85,8 @@ button[type="submit"]:hover {
   color: #083761;
 }
 
-/* ============================== */
-/* 🌙 Dark Mode Overrides Below   */
-/* ============================== */
 
+/* Dark Mode */
 body.dark .signup-container {
   background: linear-gradient(160deg, #06192b, #113d67, #1b4e88);
   color: #ffffff;

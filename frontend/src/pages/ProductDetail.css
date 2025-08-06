@@ -1,4 +1,4 @@
-/* 🌟 Product Detail Layout */
+/*Product Detail Layout */
 .product-detail-container {
   display: flex;
   flex-wrap: wrap;
@@ -10,7 +10,7 @@
   transition: background-color 0.4s ease, color 0.4s ease;
 }
 
-/* 📷 Product Image */
+/* Product Image */
 .product-image {
   flex: 1;
   min-width: 300px;
@@ -30,7 +30,7 @@
   transform: scale(1.03);
 }
 
-/* 📝 Product Info */
+/* Product Info */
 .product-info {
   flex: 2;
   min-width: 300px;
@@ -58,7 +58,7 @@
   color: #333;
 }
 
-/* ✅ Feature List */
+/* Feature List */
 .product-info ul {
   padding-left: 20px;
   margin-top: -8px;
@@ -70,14 +70,14 @@
   list-style: disc;
 }
 
-/* 💰 Price */
+/* Price */
 .price {
   font-size: 1.5rem;
   font-weight: bold;
   color: #007b5e;
 }
 
-/* 📎 Brochure Button */
+/* Brochure Button */
 .btn-download-brochure {
   display: inline-block;
   padding: 10px 20px;
@@ -97,7 +97,7 @@
   transform: translateY(-1px);
 }
 
-/* 🛒 Add to Cart Button */
+/* Add to Cart Button */
 .add-to-cart {
   margin-top: 25px;
   padding: 12px 28px;
@@ -116,7 +116,7 @@
   background-color: #09345e;
 }
 
-/* 🌙 Dark Mode */
+/*  Dark Mode */
 body.dark .product-detail-container {
   background-color: #0c1a2b;
   color: #e6e6e6;
@@ -154,7 +154,7 @@ body.dark .add-to-cart:hover {
   background-color: #e6c200;
 }
 
-/* 📱 Responsive */
+/* Responsive */
 @media (max-width: 768px) {
   .product-detail-container {
     flex-direction: column;

@@ -23,7 +23,7 @@ function Signup() {
 
       console.log(res.data);
       alert("Signup successful! You can now login.");
-      navigate("/login"); // redirect to login page
+      navigate("/login"); 
     } catch (err) {
       console.error(err.response?.data || err.message);
       alert("Signup failed: " + (err.response?.data?.error || err.message));

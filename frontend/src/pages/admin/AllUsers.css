@@ -44,7 +44,7 @@
   background-color: #07305c;
 }
 
-/* 🌙 Dark Mode */
+/* Dark Mode */
 body.dark .all-users {
   background-color: #101c2c;
   color: #ffffff;
@@ -69,7 +69,7 @@ body.dark .all-users button:hover {
   background-color: #e6c200;
 }
 
-/* 📱 Responsive Table Layout */
+/* Responsive  */
 @media (max-width: 768px) {
   .all-users table {
     border: 0;

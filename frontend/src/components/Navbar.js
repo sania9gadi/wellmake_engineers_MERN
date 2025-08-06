@@ -1,10 +1,10 @@
-// ✅ FINAL UPDATED NAVBAR.JS
+// FINAL UPDATED NAVBAR.JS
 
 import { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaShoppingCart, FaMoon, FaSun } from "react-icons/fa";
-import { useTheme } from "../context/ThemeContext"; // Dark mode context
-import { useCart } from "../context/CartContext";    // 🛒 Cart context
+import { useTheme } from "../context/ThemeContext"; 
+import { useCart } from "../context/CartContext";   
 import "./Navbar.css";
 import logo from "../assets/wme-logo.jpg";
 
@@ -14,8 +14,8 @@ const Navbar = () => {
   const { darkMode, toggleDarkMode } = useTheme();
   const [showLinks, setShowLinks] = useState(false);
 
-  const { cartItems } = useCart(); // ✅ Cart items from context
-  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0); // Count total quantity
+  const { cartItems } = useCart(); 
+  const cartCount = cartItems.reduce((sum, item) => sum + item.quantity, 0); 
 
   useEffect(() => {
     document.body.classList.toggle("dark", darkMode);
@@ -67,12 +67,12 @@ const Navbar = () => {
 
       {/* Right Side Controls */}
       <div className="navbar-controls">
-        {/* 🌙 Dark Mode Toggle */}
+      
         <button className="theme-toggle" onClick={toggleDarkMode}>
           {darkMode ? <FaSun /> : <FaMoon />}
         </button>
 
-        {/* 🛒 Cart Button */}
+        {/*  Cart Button */}
         {role === "user" && (
           <button className="cart-button" onClick={() => navigate("/cart")}>
             <FaShoppingCart />
@@ -80,7 +80,7 @@ const Navbar = () => {
           </button>
         )}
 
-        {/* 🔓 Logout */}
+        {/*  Logout */}
         {role && (
           <button className="logout-button" onClick={logout}>Logout</button>
         )}

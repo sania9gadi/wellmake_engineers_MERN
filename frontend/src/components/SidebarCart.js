@@ -1,5 +1,5 @@
 import React from 'react';
-import './SidebarCart.css'; // Create this file for styling
+import './SidebarCart.css'; 
 
 const SidebarCart = ({ isOpen, onClose }) => {
   return (
@@ -7,7 +7,7 @@ const SidebarCart = ({ isOpen, onClose }) => {
       <div className="sidebar-content">
         <button className="close-btn" onClick={onClose}>✖</button>
         <h2>Your Cart</h2>
-        {/* Your cart items go here */}
+        
       </div>
     </div>
   );

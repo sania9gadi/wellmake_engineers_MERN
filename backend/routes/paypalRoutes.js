@@ -7,7 +7,7 @@ router.post("/get-token", async (req, res) => {
     const token = await getAccessToken();
     res.json({ access_token: token });
   } catch (err) {
-    console.error("❌ Token Error", err.message);
+    console.error(" Token Error", err.message);
     res.status(500).json({ error: "Failed to get token" });
   }
 });
@@ -18,7 +18,7 @@ router.post("/create-order", async (req, res) => {
     const orderId = await createPayPalOrder(amount);
     res.json({ id: orderId });
   } catch (err) {
-    console.error("❌ Order Error", err.message);
+    console.error(" Order Error", err.message);
     res.status(500).json({ error: "Failed to create order" });
   }
 });

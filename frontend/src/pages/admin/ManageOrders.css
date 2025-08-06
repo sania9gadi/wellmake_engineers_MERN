@@ -204,7 +204,7 @@ body.dark .reset-button:hover {
   background-color: #3a4b61;
 }
 
-/* Responsive Table without JSX change */
+/* Responsive  */
 @media screen and (max-width: 768px) {
   .product-table,
   .product-table thead,

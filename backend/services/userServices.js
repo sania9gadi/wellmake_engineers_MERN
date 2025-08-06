@@ -1,7 +1,7 @@
 const User = require('../models/user');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-require('dotenv').config(); // ✅ Required
+require('dotenv').config(); 
 
 // Register new user
 async function registerUser(data) {
@@ -79,7 +79,7 @@ const loginUserHandler = async (req, res) => {
 };
 const getAllUsers = async (req, res) => {
   try {
-    const users = await User.find().select('-password'); // exclude password
+    const users = await User.find().select('-password'); 
     res.status(200).json(users);
   } catch (err) {
     console.error("Error fetching users:", err);
@@ -94,7 +94,7 @@ async function deleteUser(id) {
 
 const getProfile = async (req, res) => {
   try {
-    const userId = req.user.id; // req.user is populated by the protectRoute middleware
+    const userId = req.user.id; 
     const user = await User.findById(userId).select('-password');
 
     if (!user) {

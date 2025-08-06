@@ -44,7 +44,7 @@ export function ThemeProvider({ children }) {
     setDarkMode(prev => !prev);
   };
 
-  // Load from localStorage
+  
   useEffect(() => {
     const savedMode = localStorage.getItem('darkMode');
     if (savedMode !== null) {
@@ -52,7 +52,7 @@ export function ThemeProvider({ children }) {
     }
   }, []);
 
-  // Apply/remove class + save preference
+ 
   useEffect(() => {
     document.body.classList.toggle('dark-mode', darkMode);
     localStorage.setItem('darkMode', darkMode);

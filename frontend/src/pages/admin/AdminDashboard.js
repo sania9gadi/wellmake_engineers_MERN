@@ -3,7 +3,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import './AdminDashboard.css';
 
 const AdminDashboard = () => {
-  // Assuming admin info is stored in localStorage after login
+ 
   const adminInfo = JSON.parse(localStorage.getItem('adminInfo')) || {
     name: "Admin",
     email: "admin@example.com",
@@ -52,7 +52,7 @@ const AdminDashboard = () => {
           </div>
         </div>
         
-        <Outlet /> {/* Render nested routes */}
+        <Outlet /> 
       </main>
     </div>
   );

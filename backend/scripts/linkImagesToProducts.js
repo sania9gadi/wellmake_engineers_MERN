@@ -51,17 +51,17 @@ const updateImageUrls = async () => {
       if (match) {
         product.imageUrl = `/uploads/${match}`;
         await product.save();
-        console.log(`✅ Matched: ${product.name} -> ${match}`);
+        console.log(` Matched: ${product.name} -> ${match}`);
       } else {
         const closest = getClosestMatch(product.name, files);
-        console.log(`❌ No image found for: ${product.name}`);
+        console.log(` No image found for: ${product.name}`);
         if (closest) {
-          console.log(`   🔍 Closest match: ${closest}`);
+          console.log(`    Closest match: ${closest}`);
         }
       }
     }
   } catch (err) {
-    console.error("❌ Error updating image URLs:", err);
+    console.error(" Error updating image URLs:", err);
   } finally {
     mongoose.disconnect();
   }

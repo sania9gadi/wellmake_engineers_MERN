@@ -2,7 +2,7 @@ const axios = require('axios');
 const Admin = require('../models/admin'); 
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-require('dotenv').config(); // ✅ Required
+require('dotenv').config(); 
 
 const loginAdmin = async (req, res) => {
   const { email, password } = req.body;

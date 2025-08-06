@@ -1,4 +1,4 @@
-/* ✅ Inquiry Container */
+/*  Inquiry Container */
 .inquiry-container {
   padding: 40px;
   min-height: 100vh;
@@ -9,7 +9,7 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ✅ Light Mode Form */
+/*  Light Mode Form */
 .inquiry-form {
   background-color: #ffffff;
   padding: 40px;
@@ -76,7 +76,7 @@ button[type="submit"]:hover {
   background-color: #07305c;
 }
 
-/* ✅ Dark Mode */
+/* Dark Mode */
 body.dark .inquiry-container {
   background: linear-gradient(160deg, #06192b, #113d67, #1b4e88);
   color: #ffffff;
@@ -118,7 +118,7 @@ body.dark button[type="submit"]:hover {
   background-color: #e6c200;
 }
 
-/* 📱 Responsive Design */
+/*  Responsive Design */
 @media (max-width: 600px) {
   .inquiry-container {
     padding: 20px;

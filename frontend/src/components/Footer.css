@@ -99,7 +99,7 @@
   transition: border-color 0.3s ease;
 }
 
-/* Dark mode support */
+/* Dark mode  */
 body.dark .footer {
   background-color: #0f172a;
   color: #e2e8f0;

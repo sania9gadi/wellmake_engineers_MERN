@@ -65,7 +65,7 @@
   cursor: not-allowed;
 }
 
-/* 🌙 Dark Mode */
+/* Dark Mode */
 body.dark .add-product-container {
   background-color: #12243a;
   color: #ffffff;
@@ -97,7 +97,7 @@ body.dark .add-product-form button:hover {
   background-color: #e6c200;
 }
 
-/* 📱 Responsive */
+/*  Responsive */
 @media (max-width: 600px) {
   .add-product-container {
     padding: 20px;

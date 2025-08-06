@@ -12,19 +12,19 @@ const {
 const { protectRoute } = require('../middleware/AuthMiddleware');
 const { checkAdmin } = require('../middleware/checkRole');
 
-// ✅ FIX: Import your model here
+//  FIX: Import your model here
 const Order = require('../models/order');
 
-// ✅ Place order with userId and authentication
+// Place order with userId and authentication
 router.post('/place', protectRoute, async (req, res) => {
   try {
-    console.log("📦 Incoming order:", req.body);
-    console.log("👤 Logged-in user:", req.user._id);
+    console.log(" Incoming order:", req.body);
+    console.log(" Logged-in user:", req.user._id);
 
     const order = await placeOrder(req.body, req.user._id);
     res.status(201).json(order);
   } catch (err) {
-    console.error("❌ Error placing order:", err.message);
+    console.error(" Error placing order:", err.message);
     res.status(500).json({ error: err.message });
   }
 });
@@ -35,12 +35,12 @@ router.get('/all-orders', protectRoute, checkAdmin, async (req, res) => {
     const orders = await getAllOrders();
     res.json(orders);
   } catch (err) {
-    console.error("🔴 Error in /api/order/all-orders:", err);
+    console.error(" Error in /api/order/all-orders:", err);
     res.status(500).json({ message: "Server Error", error: err.message });
   }
 });
 
-// ✅ Get orders for a specific user
+//  Get orders for a specific user
 router.get('/user/:id', protectRoute, async (req, res) => {
   try {
     const orders = await Order.find({ userId: req.params.id });
@@ -51,7 +51,7 @@ router.get('/user/:id', protectRoute, async (req, res) => {
   }
 });
 
-// ✅ Get a specific order by ID
+//  Get a specific order by ID
 router.get('/:orderId', protectRoute, async (req, res) => {
   try {
     const order = await Order.findById(req.params.orderId);
@@ -62,7 +62,7 @@ router.get('/:orderId', protectRoute, async (req, res) => {
   }
 });
 
-// ✅ Cancel order by ID
+//  Cancel order by ID
 router.delete('/:id', async (req, res) => {
   try {
     await cancelOrder(req.params.id);
@@ -72,7 +72,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// ✅ Update order status (admin only)
+//  Update order status (admin only)
 router.put('/admin/order/:id/status', protectRoute, checkAdmin, updateOrderStatus);
 
 module.exports = router;

@@ -7,11 +7,11 @@ const submitInquiry = async (data) => {
 
 const getAllInquiries = async () => {
   try {
-    console.log("📦 getAllInquiries called");
+    console.log("getAllInquiries called");
     const inquiries = await Inquiry.find();
     return inquiries;
   } catch (error) {
-    console.error("🔴 Error in getAllInquiries:", error);
+    console.error("Error in getAllInquiries:", error);
     throw new Error("Failed to fetch inquiries");
   }
 };
@@ -29,6 +29,6 @@ const deleteInquiry = async (id) => {
 module.exports = {
   submitInquiry,
   getAllInquiries,
-  getInquiriesByEmail, // ✅ add this
+  getInquiriesByEmail, 
   deleteInquiry
 };

@@ -14,7 +14,7 @@ const {
 const { protectRoute } = require('../middleware/AuthMiddleware');
 const { checkAdmin } = require('../middleware/checkRole');
 
-// ✅ Get current user's quotes
+//  Get current user's quotes
 router.get('/my', protectRoute, async (req, res) => {
   try {
     const userEmail = req.user.email;
@@ -26,7 +26,7 @@ router.get('/my', protectRoute, async (req, res) => {
   }
 });
 
-// ✅ Submit a new quote
+//  Submit a new quote
 router.post('/request', async (req, res) => {
   try {
     const quote = await requestQuote(req.body);
@@ -37,7 +37,7 @@ router.post('/request', async (req, res) => {
   }
 });
 
-// ✅ Admin: get all quotes
+//  Admin: get all quotes
 router.get('/', async (req, res) => {
   try {
     const quotes = await getAllQuotes();
@@ -47,7 +47,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// ✅ Get quote by ID
+//  Get quote by ID
 router.get('/:id', async (req, res) => {
   try {
     const quote = await getQuoteById(req.params.id);
@@ -58,7 +58,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// ✅ Delete quote
+//  Delete quote
 router.delete('/:id', async (req, res) => {
   try {
     const deleted = await deleteQuote(req.params.id);
@@ -69,7 +69,7 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
-// ✅ Update quote status
+// Update quote status
 router.patch('/:id/status', async (req, res) => {
   const { status } = req.body;
   try {

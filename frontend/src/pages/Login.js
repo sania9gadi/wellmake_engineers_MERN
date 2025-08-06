@@ -101,8 +101,6 @@ function Login() {
       localStorage.setItem("token", data.token);
       localStorage.setItem("user", JSON.stringify(data.user));
       localStorage.setItem("role", data.user.role);
-
-      // ✅ Add this line to store admin/user info with name/email/phone
       localStorage.setItem("adminInfo", JSON.stringify(data.user));
 
       if (data.user.role === "admin") {

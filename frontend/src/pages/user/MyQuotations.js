@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './MyQuotations.css'; // Optional: for custom styling
+import './MyQuotations.css'; 
 import { Link } from 'react-router-dom';
 
 const MyQuotations = () => {

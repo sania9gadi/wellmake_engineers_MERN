@@ -25,8 +25,7 @@ function GetQuote() {
       const res = await axios.post("http://localhost:9000/api/quote/request", quoteData);
       alert("Quotation request submitted successfully!");
       console.log("Quote saved:", res.data);
-
-      // Optionally reset form
+      
       setName("");
       setEmail("");
       setCompany("");

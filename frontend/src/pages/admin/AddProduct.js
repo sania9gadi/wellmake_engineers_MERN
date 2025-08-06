@@ -40,7 +40,7 @@ const AddProduct = () => {
         }
       });
 
-      alert('✅ Product added successfully!');
+      alert('Product added successfully!');
       setFormData({
         name: '',
         description: '',

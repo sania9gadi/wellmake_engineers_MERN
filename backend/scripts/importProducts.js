@@ -63,10 +63,10 @@ data = data.map((item) => ({
 // 4. Insert into DB
 Product.insertMany(data)
   .then(() => {
-    console.log("✅ Products imported successfully!");
+    console.log("Products imported successfully!");
     mongoose.disconnect();
   })
   .catch((err) => {
-    console.error("❌ Import Error:", err);
+    console.error("Import Error:", err);
     mongoose.disconnect();
   });

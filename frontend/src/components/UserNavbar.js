@@ -1,7 +1,6 @@
 import React from 'react';
 import './UserNavbar.css';
-import SidebarCart from './SidebarCart'; // make sure path is correct
-
+import SidebarCart from './SidebarCart'; 
 const UserNavbar = ({ cartOpen, setCartOpen }) => {
   const handleLogout = () => {
     localStorage.removeItem('role');
@@ -11,13 +10,13 @@ const UserNavbar = ({ cartOpen, setCartOpen }) => {
 
   return (
     <div>
-      {/* 🔷 Navigation Bar */}
+      {/*  Navigation Bar */}
       <nav className="navbar">
         <a href="/">Home</a>
         <a href="/user/dashboard">Dashboard</a>
         <a href="/products">Products</a>
 
-        {/* 🛒 Cart Button */}
+        {/* Cart Button */}
         <button onClick={() => setCartOpen(true)} className="cart-icon-btn">
           🛒
         </button>
@@ -27,7 +26,7 @@ const UserNavbar = ({ cartOpen, setCartOpen }) => {
         </button>
       </nav>
 
-      {/* 🧩 Sidebar Cart Drawer */}
+      {/*  Sidebar Cart Drawer */}
       <SidebarCart isOpen={cartOpen} onClose={() => setCartOpen(false)} />
     </div>
   );

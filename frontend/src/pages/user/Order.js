@@ -40,7 +40,7 @@ function Order() {
         }
       );
 
-      console.log("✅ Order placed:", response.data);
+      console.log(" Order placed:", response.data);
       alert("Order placed successfully!");
 
       setName("");

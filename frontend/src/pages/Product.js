@@ -33,6 +33,7 @@ function Products() {
 
 export default Products;
 */
+
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';

@@ -64,9 +64,9 @@ button[type="submit"]:hover {
   background-color: #07305c;
 }
 
-/* ============================ */
-/* 🌙 Dark Mode Styles */
-/* ============================ */
+
+/*  Dark Mode  */
+
 body.dark .quote-container {
   background-color: #1f1f1f;
 }
