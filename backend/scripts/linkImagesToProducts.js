@@ -1,3 +1,5 @@
+// 
+
 const mongoose = require("mongoose");
 const fs = require("fs");
 const path = require("path");
@@ -6,10 +8,12 @@ const connectDB = require("../db/connect");
 
 const IMAGE_FOLDER = path.join(__dirname, "../uploads");
 
+// Normalize string (lowercase + remove special chars)
 function normalize(str) {
   return str.toLowerCase().replace(/[^a-z0-9]/gi, '');
 }
 
+// Find closest filename to product name
 function getClosestMatch(target, files) {
   const targetNorm = normalize(target);
   let closest = null;
@@ -39,29 +43,35 @@ function getClosestMatch(target, files) {
 
 const updateImageUrls = async () => {
   try {
+    // 1. Connect to Atlas
     await connectDB();
+
+    // 2. Read all image files
     const files = fs.readdirSync(IMAGE_FOLDER).map(f => f.trim());
 
+    // 3. Fetch all products
     const products = await Product.find();
 
     for (const product of products) {
       const expectedFileName = `${product.name.trim()}.avif`;
+
+      // Exact match
       const match = files.find(file => file === expectedFileName);
 
       if (match) {
         product.imageUrl = `/uploads/${match}`;
         await product.save();
-        console.log(` Matched: ${product.name} -> ${match}`);
+        console.log(`✅ Matched: ${product.name} -> ${match}`);
       } else {
         const closest = getClosestMatch(product.name, files);
-        console.log(` No image found for: ${product.name}`);
+        console.log(`⚠️ No exact image found for: ${product.name}`);
         if (closest) {
-          console.log(`    Closest match: ${closest}`);
+          console.log(`   👉 Closest match: ${closest}`);
         }
       }
     }
   } catch (err) {
-    console.error(" Error updating image URLs:", err);
+    console.error("❌ Error updating image URLs:", err);
   } finally {
     mongoose.disconnect();
   }
